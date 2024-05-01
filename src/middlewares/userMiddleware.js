@@ -4,6 +4,8 @@ const { authLogout } = require('../controllers/auth.controller');
 
 const userMiddleware = (request, response, next) => {
     const token = request.cookies.accessToken;
+
+    console.log(request.cookies)
     
     try {
         if(!token) {
